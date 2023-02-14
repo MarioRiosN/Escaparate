@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"/>
+    <title>Cesta</title>
+    <script src="cesta.js" type="text/javascript"></script>
+  </head>
+  <body style="background-color: #393e46">
+    <div class="fixed-top">
+      <div class="container-fluid" style="background-color: #393e46">
+        <div class="d-flex flex-row align-items-center">
+          <img src="../images/logo.png" class="img-fluid col-1" />
+          <h2 class="col-11 d-flex justify-self-left text-light">GameStuck</h2>
+        </div>
+      </div>
+      <div class="container-fluid mb-2 bg-light col-12 d-flex justify-content-end" style="background-color: #393e46">
+        <button id="borrar" class="btn btn-outline-primary col-4 col-sm-1 d-flex justify-content-center align-items-center" type="submit">Borrar cesta</button>
+        <button id="cerrarSesion" class="btn btn-outline-primary col-4 col-sm-1 d-flex justify-content-center align-items-center" type="submit">Cerrar Sesion</button>
+        <button id="home" class="btn btn-outline-primary col-4 col-sm-1 d-flex justify-content-center align-items-center" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
+            <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z"/>
+            <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Z"/>
+          </svg><i class="bi bi-house-fill"></i></button>
+      </div>
+    </div>  
+    <div id="objetos" class="col-12 d-flex flex-column justify-content-center align-items-center" style="background-color: #eeeeee; margin-top: 10em;">
+      <h1 id="titulo" class="col-12 text-center"></h1>
+      <div id="juegos" class="col-12 d-flex justify-content-around flex-wrap"></div>
+      <h1 id="pago" class="col-12 text-center"></h1>
+    </div>
+    <footer class="text-light d-flex align-items-center justify-content-around" style="background-color: #222831">
+      <div class="d-flex flex-column text-center m-2 col-5">
+        <a href="https://labs.openai.com/sc/30pH5VDKPgvyNrg3x6CdV9Dw" target="_blank" class="h5 text-light">Fuente de las imágenes hechas con IA</a>
+      </div>
+      <div class="d-flex flex-column text-center m-2 col-5">
+        <a class="m-2 text-light">Hecho por</a>
+        <a class="m-2 text-light">Mario Ríos</a>
+      </div>
+      <div class="col-1">
+        <img src="../images/logo.png" style="width: 100%; height: 70%" />
+      </div>
+    </footer>
+  </body>
+</html>

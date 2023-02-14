@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.addEventListener("load", iniciar);
+        function iniciar(){
+        sessionStorage.setItem("logeado", false);
+        url = "src/usuarios.json";
+        fetch (url) 
+            .then (respuesta => respuesta.json()) 
+            .then (json => cargarJSON(json))
+            .catch(e => console.log(e));
+        }
+        function cargarJSON(myObj){
+            for(i=0; i<myObj.length; i++){
+                sessionStorage.setItem("cesta"+myObj[i]['nombre'], "");
+            }
+            window.open("src/inicio.html", "_self");
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
