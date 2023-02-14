@@ -1,4 +1,5 @@
 window.addEventListener("load", iniciar);
+var audio = new Audio('../sound/noti.mp3');
 function iniciar(){
     document.getElementById("arcade").addEventListener("click", abrirFiltrado);
     document.getElementById("estrategia").addEventListener("click", abrirFiltrado);
@@ -83,6 +84,7 @@ function meterJuego(){
         aux += ","+this.parentNode.children[1].id;
       }
       sessionStorage.setItem("cesta"+sessionStorage.getItem("actualUser"), aux);
+      audio.play();
       Notification.requestPermission()
                     .then( resultado => {
                         if (resultado == 'granted'){

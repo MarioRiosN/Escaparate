@@ -1,5 +1,5 @@
 window.addEventListener("load", iniciar);
-
+var audio = new Audio('../sound/noti.mp3');
 function iniciar(){
     document.getElementById("home").addEventListener("click", home);
     document.getElementById("cesta").addEventListener("click", cesta);
@@ -54,6 +54,7 @@ function meterJuego(){
           aux += ","+idAux;
         }
         sessionStorage.setItem("cesta"+sessionStorage.getItem("actualUser"), aux);
+        audio.play();
         Notification.requestPermission()
                     .then( resultado => {
                         if (resultado == 'granted'){

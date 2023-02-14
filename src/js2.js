@@ -1,5 +1,5 @@
 window.addEventListener("load", iniciar);
-
+var audio = new Audio('../sound/noti.mp3');
 function iniciar(){
     document.getElementById("home").addEventListener("click", home);
     document.getElementById("cesta").addEventListener("click", cesta);
@@ -58,11 +58,12 @@ function meterJuego(){
     }else{
       aux = sessionStorage.getItem("cesta"+sessionStorage.getItem("actualUser"));
       if(aux == ""){
-        aux += this.parentNode.children[1].id;
+        aux += this.parentNode.children[2].id;
       }else{
-        aux += ","+this.parentNode.children[1].id;
+        aux += ","+this.parentNode.children[2].id;
       }
       sessionStorage.setItem("cesta"+sessionStorage.getItem("actualUser"), aux);
+      audio.play();
       Notification.requestPermission()
                     .then( resultado => {
                         if (resultado == 'granted'){
